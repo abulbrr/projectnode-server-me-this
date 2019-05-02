@@ -14,8 +14,9 @@ server.get('home', function(req, res) {
 })
 
 
-server.get('sell', function(req,res) {
-    res.html("Sell me some tickets babe");
+server.get('orders', function(req,res) {
+    let file = fs.readFileSync('./www/orders.html');
+    res.html(file);
 
 });
 
